@@ -58,9 +58,6 @@ var $ = jQuery.noConflict();
             }
         }
     });
-    if(window.location.hostname != 'aadarshkumar.in'){
-       document.body.style.opacity = 0;
-    }
     /*-------------------------------------------------*/
     /* =  Animation
     /*-------------------------------------------------*/
