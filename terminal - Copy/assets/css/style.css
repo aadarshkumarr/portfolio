@@ -1,0 +1,99 @@
+*{
+    font-size: 16px;
+    font-family: "cursor", monospace
+}
+p{
+    margin: 10px 0;
+}
+body{
+    margin: 0;
+    padding: 15px 20px;
+    height: 80vh;
+    width: 100%;
+    min-width: 550px;
+    color: #519975;
+    background: #211D1B;
+    font-family: cursor, monospace;
+    overflow-x: hidden;
+}
+.command-output{
+    color: #B89076;
+    margin-left: 20px;
+    width: 60%;
+}
+.command-output a{
+    text-decoration: none;
+    color: #9C8394;
+}
+.command-output a:hover{
+    background: #73ABAD;
+    color: #211830;
+    cursor: pointer;
+}
+.command-output li, ul{
+    list-style: none;
+    padding: 0;
+}
+
+.current-line{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+textarea{
+    left: -1000px;
+    position: absolute;
+}
+textarea:focus{
+    outline: none;
+}
+.command-line:before{
+    content:"visitor@abhinavmehta.dev:~$";
+    z-index: 1000;
+}
+.typer{
+    padding-left: 5px;
+}  
+.current-line .cursor {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+.current-line .cursor::before{
+  content: "";
+  width: 10px;
+  height: 20px;
+  background: #73ABAD;
+  display: inline-block;
+  animation: cursor-blink 1.5s steps(2) infinite;
+ }
+.hide-cursor{
+    display: none;
+}
+.command{
+    color: #73ABAD;
+    text-shadow: 0 0 5px #73ABAD;
+}
+.terminal-banner{
+    margin-bottom: 10px;
+}
+td{
+    padding-right: 50px;
+}
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  body::-webkit-scrollbar-track {
+    background: #211D1B;        /* color of the tracking area */
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: #211D1B;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #211D1B;  /* creates padding around scroll thumb */
+  }
