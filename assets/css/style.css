@@ -1056,6 +1056,52 @@ header nav.navbar #logo a.navbar-brand img {
   }
 }
 
+.social-buttons {
+  position: absolute;
+  left: 1rem;
+  top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+.social-buttons a {
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 18px;
+  width: 60px;
+  height: 60px;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 4px 0;
+}
+
+.social-buttons a::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #a3a1a1, #0f0f0f);
+  border-radius: 50%;
+  z-index: -1;
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover::before {
+  transform: scale(0);
+}
+
+.social-buttons a i {
+  transition: 0.3s ease-in;
+}
+
+.social-buttons a:hover i {
+  background: linear-gradient(45deg, #a3a1a1, #0f0f0f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transform: scale(2.2);
+}
+
 @media screen and (max-width: 991px) {
   #share-this {
     left: inherit;
@@ -1066,18 +1112,14 @@ header nav.navbar #logo a.navbar-brand img {
 
 @media screen and (max-width: 767px) {
   #share-this {
-    -webkit-transform: rotate(-90deg);
-        -ms-transform: rotate(-90deg);
-            transform: rotate(-90deg);
+
     right: -60px;
     top: 58px;
   }
 }
 
 #share-this a {
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+
   color: white;
   font-family: "Inconsolata", monospace;
   font-size: 18px;
