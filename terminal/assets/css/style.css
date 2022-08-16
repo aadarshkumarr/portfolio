@@ -97,3 +97,7 @@ body::-webkit-scrollbar {
     border-radius: 20px;       /* roundness of the scroll thumb */
     border: 3px solid #211D1B;  /* creates padding around scroll thumb */
   }
+  .terminal-banner {
+    font-family: monospace;
+    white-space: pre;
+}
