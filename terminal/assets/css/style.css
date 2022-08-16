@@ -48,7 +48,7 @@ textarea:focus{
     outline: none;
 }
 .command-line:before{
-    content:"visitor@abhinavmehta.dev:~$";
+    content:"visitor@aadarshkumar.in:~$";
     z-index: 1000;
 }
 .typer{
